@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "terra2" {
   name     = "terra2"
-  location = "East US"
+  location = "West US"
 }
 
 resource "azurerm_virtual_network" "terra_vnet" {
@@ -48,7 +48,7 @@ resource "azurerm_windows_virtual_machine" "terra_vm" {
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
     offer     = "WindowsServer"
-    sku       = "2019-Datacenter"
+    sku       = "2022-Datacenter"
     version   = "latest"
   }
 }
